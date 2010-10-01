@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
+<meta http-equiv="Content-Type" content="image/svg+xml" />
+  <defs>
+    <linearGradient id="aquaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.0" stop-color="#6080ff" />
+      <stop offset="0.4" stop-color="#6090ff" />
+      <stop offset="1.0" stop-color="#b0ffff" />
+    </linearGradient>
+    <linearGradient id="highlightFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.0" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="0.33" stop-color="#fff" stop-opacity="0.25"/>
+      <stop offset="0.34" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="drop-shadow" filterUnits="userSpaceOnUse" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" result="blur-out" stdDeviation="1.5" />
+      <feOffset in="blur-out" result="the-shadow" dx="0" dy="2" />
+      <feBlend in="SourceGraphic" in2="the-shadow" mode="normal" />
+    </filter>  
+    <rect id="pillShape" width="90" height="25" rx="15" ry="15" />
+  </defs>
+  <use id="theButton" xlink:href="#pillShape" transform="translate(25,20)" fill="url(#aquaFill)" filter="url(#drop-shadow)"/>
+  <use id="theHighlight" xlink:href="#pillShape" transform="translate(70,33.5) scale(0.97,0.92) translate(-45,-12.5)" fill="url(#highlightFill)" />
+  <text fill="black" font-family="Lucida Sans Unicode, Lucida Grande, sans-serif" font-size="14" x="70" y="37" text-anchor="middle">Settings...</text>
+  <script type="text/javascript" xlink:href="ZoomNPan.class.refactored.js"></script>
+  <script type="text/javascript"> var ZP = new ZoomNPan()</script>
+</svg>
